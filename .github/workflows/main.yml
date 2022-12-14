@@ -16,7 +16,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16.x
-          registry-url: https://npm.pkg.github.com/agustodev
+          registry-url: https://npm.pkg.github.com/
 
       - run: npm install
       - run: npm run build
