@@ -1,0 +1,15 @@
+#folders ----------------------------------------------------------------
+src/
+__test__/
+coverage/
+node_modules/
+
+#files ----------------------------------------------------------------
+.npmrc
+.env
+.env.local
+.npmignore
+.gitignore
+.jest.config.js
+README.md
+space.code-workspace
