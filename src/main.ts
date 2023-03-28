@@ -1,5 +1,3 @@
-import LicenseGenerator from './utils';
+import { encryptDataProps, LicenseGenerator } from './utils';
 
-const licenseGenerator = new LicenseGenerator();
-
-export { licenseGenerator };
+export { LicenseGenerator, encryptDataProps };
