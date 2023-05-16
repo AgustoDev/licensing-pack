@@ -9,6 +9,7 @@ export const payload = {
   startDate,
   endDate,
   gracePeriod: 5,
+  modules: ['module1', 'module2'],
 };
 
 describe('app', () => {
@@ -18,7 +19,6 @@ describe('app', () => {
 
   it('should generate a license', () => {
     const { data, error, errorMessage } = LicenseGenerator.encrypt(payload);
-    console.log({ data, error, errorMessage });
     expect(data).toBeDefined();
     expect(data).toBeTypeOf('string');
   });
@@ -32,12 +32,12 @@ describe('app', () => {
   it('should decrypt a license', () => {
     const { data } = LicenseGenerator.encrypt(payload);
     const decrypted = LicenseGenerator.decrypt(data as string);
-    console.log({ decrypted });
     expect(decrypted).toBeDefined();
     expect(decrypted?.data?.name).toBe(payload.name);
     expect(decrypted?.data?.startDate).toBe(payload.startDate);
     expect(decrypted?.data?.endDate).toBe(payload.endDate);
-    expect(JSON.stringify(decrypted?.data)).toBe(JSON.stringify(payload));
+    expect(decrypted?.data?.gracePeriod).toBe(payload.gracePeriod);
+    expect(JSON.stringify(decrypted?.data?.modules)).toBe(JSON.stringify(payload.modules));
   });
 
   it('should throw an error if the license is invalid', () => {

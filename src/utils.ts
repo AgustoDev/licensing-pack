@@ -5,6 +5,7 @@ export interface encryptDataProps {
   startDate: number;
   endDate: number;
   gracePeriod?: number;
+  modules?: string[];
 }
 
 const randomGenerator = (length: number) => {

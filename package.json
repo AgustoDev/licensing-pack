@@ -1,14 +1,14 @@
 {
-  "name": "@agustocoltd/licensing-pack",
+  "name": "@agustodev/licensing-pack",
   "author": "agusto-dev",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "type": "module",
   "publishConfig": {
-    "agustocoltd:registry": "https://npm.pkg.github.com"
+    "agustodev:registry": "https://npm.pkg.github.com"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/agustocoltd/licensing-pack"
+    "url": "https://github.com/agustodev/licensing-pack"
   },
   "exports": {
     ".": {
